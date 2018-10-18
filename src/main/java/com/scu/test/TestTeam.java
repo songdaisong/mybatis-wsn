@@ -1,10 +1,26 @@
 package com.scu.test;
 
+import org.junit.Test;
+
 public class TestTeam {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	@Test
+	public void testAdd() {
+		
 	}
-
+	
+	@Test
+	public void testDel() {
+		
+	}
+	
+	@Test
+	public void testUpdate() {
+		
+	}
+	
+	@Test
+	public void testQuery() {
+		
+	}
 }
