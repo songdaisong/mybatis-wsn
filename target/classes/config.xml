@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>		<!--配置标签 -->
+
+	<environments default="mysql"><!--环境集合：mysql环境、Orcle环境 -->
+		<environment id="mysql"><!--mysql环境 -->
+			<!--指定事务管理类型，使用jdbc的提交和回滚 -->
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED"><!-- 缓存jdbc连接 -->
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url"
+					value="jdbc:mysql://localhost:3306/wsn?useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true&useSSL=false" />
+				<property name="username" value="root" />
+				<property name="password" value="123456" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="com/scu/mapper/NewsMapper.xml" />
+		<mapper resource="com/scu/mapper/ProjectsMapper.xml" />
+		<mapper resource="com/scu/mapper/PublicationsMapper.xml" />
+		<mapper resource="com/scu/mapper/TeamMapper.xml" />
+	</mappers>
+</configuration>  
